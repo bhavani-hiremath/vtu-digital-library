@@ -1,0 +1,17 @@
+# Local development / IDE files
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local database exports
+*.sql
+
+# Environment / secret configuration
+.env
+.env.*
+
+# XAMPP runtime folders
+xampp/
+htdocs/

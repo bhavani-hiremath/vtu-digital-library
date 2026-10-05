@@ -1,0 +1,379 @@
+/* Color Palette: Netflix Red and Dark Grays */
+:root {
+    --netflix-red: #e50914;
+    --dark-bg: #141414;
+    --sidebar-bg: #0b0b0b;
+    --card-bg: #222;
+    --text-color: #fff;
+    --light-gray: #b3b3b3;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--dark-bg);
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--netflix-red);
+}
+
+/* General Purpose Icons and Logos */
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    filter: invert(1); /* Makes icons white to stand out on dark background */
+}
+
+.icon-small {
+     width: 16px;
+    height: 16px;
+}
+
+.main-logo {
+    width: 150px; /* Increased size for dashboard prominence */
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* Dashboard Layout */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.logo-container {
+     /* Container for logo in sidebar */
+     text-align: center;
+     margin-bottom: 30px;
+}
+
+.sidebar-logo {
+    width: 100px; 
+    /* The vtu logo .png should be placed here */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: var(--light-gray);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-item:hover {
+    color: var(--text-color);
+    background-color: #333;
+}
+
+.nav-item.active {
+    color: var(--text-color);
+    background-color: var(--netflix-red); /* Active link is red */
+}
+
+.nav-icon {
+    width: 18px;
+    margin-right: 15px;
+    filter: invert(1); /* Makes icons white */
+}
+
+.logout-btn {
+    margin-top: auto;
+    padding: 15px 20px;
+    background-color: var(--netflix-red);
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.logout-btn:hover {
+    background-color: #ff3333;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: var(--dark-bg);
+}
+
+.main-header h1 {
+    color: var(--text-color);
+    font-size: 2em;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+/* Dashboard Widgets */
+.dashboard-widgets {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.widget {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    flex: 1;
+}
+
+.widget h2 {
+    color: var(--light-gray);
+    font-size: 1em;
+}
+
+.widget p {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--netflix-red);
+    margin: 0;
+}
+
+/* Buttons/Links */
+.btn-primary {
+    background-color: var(--netflix-red);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #ff3333;
+}
+
+/* Auth and Landing Pages */
+.landing-bg, .auth-bg {
+    background-color: var(--dark-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.landing-container, .auth-box {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 350px;
+}
+
+.app-title {
+    color: var(--netflix-red);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.tagline, .subtitle, .switch-text, .back-link {
+    color: var(--light-gray);
+    margin-bottom: 20px;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-btn {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.card-btn:hover {
+    background-color: #444;
+}
+
+/* Form inputs */
+.input-group {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--light-gray);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't add to width */
+}
+
+/* Table styles for view_books.php */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: var(--card-bg);
+}
+
+th, td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: left;
+    color: var(--text-color);
+}
+
+th {
+    background-color: var(--netflix-red);
+    color: white;
+}
+
+.action-btn {
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+}
+
+.primary-action { background-color: #3498db; }
+.unavailable-action { background-color: #95a5a6; cursor: not-allowed; }
+
+
+/* Overdue status styling */
+.status-issued { color: #3498db; font-weight: bold; } /* Blue */
+.status-overdue { color: #e74c3c; font-weight: bold; } /* Red/Netflix Red */
+.status-returned { color: #2ecc71; } /* Green */
+/* ------------------------------
+   ADMIN DASHBOARD LAYOUT FIX
+--------------------------------*/
+.dashboard-bg {
+    background: #111827;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #1f2937;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar .logo-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.sidebar-logo {
+    width: 120px;
+}
+
+/* NAV ITEMS */
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    margin: 6px 0;
+    color: #e5e7eb;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: #374151;
+}
+
+.nav-item .icon {
+    width: 20px;
+    margin-right: 12px;
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background: #ef4444;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.logout-btn:hover {
+    background: #dc2626;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    flex: 1;
+    padding: 30px;
+    color: white;
+}
+
+.main-header h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* INFO SECTION */
+.main-info {
+    background: #1f2937;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 15px;
+    background: #3b82f6;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
